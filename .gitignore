@@ -1,0 +1,14 @@
+dist/
+build/
+
+node_modules/
+appsettings.json
+
+*.log
+*.tmp
+
+.vscode/
+*.sublime-workspace
+
+.DS_Store
+Thumbs.db
