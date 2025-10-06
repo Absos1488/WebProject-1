@@ -1,0 +1,41 @@
+*{
+  text-decoration: none;
+}
+.header{
+    margin: 3vh 0vh 0vh 4vh;
+}
+.header__nav{
+    display: flex;
+    font-family: Abeezee;
+    justify-content: space-between;
+}
+
+.nav-brand>a{
+    display: flex;
+    align-items: center;
+    color: var(--color-dark);
+}
+.header__nav-div{
+    display: flex;
+    &>ul{
+        display: flex;
+        align-items: center;
+        gap: 20%;
+    }
+    &>ul>li>a{
+        color: var(--color-dark);
+    }
+}
+.nav-buttons>ul{
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    gap: 5vh;
+    &>li>a{
+    color: var(--color-dark);
+    }
+}
+.nav-buttons{
+    display: inline-flex;
+    margin-right: 6vh;
+}

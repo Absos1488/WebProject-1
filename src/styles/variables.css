@@ -1,0 +1,12 @@
+:root{
+    --color-dark: #19191B;
+    --color-white: #FFFFFF;
+    --color-nav: #5454D4;
+    --color-nav-button: #3939E0;
+    --color-hover: #1111FF;
+    --color-article: #151519;
+    --color-article2: #2D26E2;
+    --color-fotter1:  #bebebe;
+
+    --transition: 0,3s
+}
