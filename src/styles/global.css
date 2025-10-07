@@ -1,5 +1,8 @@
 :root {
-  background-color: rgb(207, 207, 207);
   text-align: center;
   list-style: none;
+}
+
+.body {
+  background: linear-gradient(120deg, rgb(204 204 204), rgb(255 255 255));
 }

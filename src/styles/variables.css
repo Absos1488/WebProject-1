@@ -1,12 +1,13 @@
-:root{
-    --color-dark: #19191B;
-    --color-white: #FFFFFF;
-    --color-nav: #5454D4;
-    --color-nav-button: #3939E0;
-    --color-hover: #1111FF;
-    --color-article: #151519;
-    --color-article2: #2D26E2;
-    --color-fotter1:  #bebebe;
-
-    --transition: 0,3s
+:root {
+  --color-dark: #19191b;
+  --color-white: #fff;
+  --color-nav: #5454d4;
+  --color-nav-button-text: #3939e0;
+  --color-hover: #11f;
+  --color-article: #151519;
+  --color-article2: #2d26e2;
+  --color-fotter1: #bebebe;
+  --color-lenear1: #5656f2;
+  --color-lenear2: #3333dc;
+  --transition: 0.3s;
 }
