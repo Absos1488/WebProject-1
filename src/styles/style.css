@@ -237,21 +237,22 @@
 
 .footer {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 400px;
 }
 
 .footer__div {
   display: flex;
-  margin-right: 0;
-  padding-right: 0;
   align-items: center;
+  justify-content: space-around;
   text-align: center;
   height: 100%;
+  width: 93%;
 }
 
 .footer__logos {
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 
@@ -268,6 +269,7 @@
 }
 
 .footer__text {
+  display: flex;
   font-family: Inter;
   margin-top: 40px;
   color: rgb(138 138 138);
@@ -277,20 +279,28 @@
   display: flex;
   align-items: center;
   text-align: center;
+  margin-top: 25px;
+  gap: 10px;
 }
 
 .footer__lists {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  justify-content: flex-end;
+  white-space: nowrap;
+  gap: 6%;
   & > div > ul {
     font-family: Inter;
     color: rgb(138 138 138);
   }
-
+  & > div > ul > li {
+    padding: 6px;
+  }
+  & > div > ul > li > h3 {
+    text-align: left;
+  }
   & > div > ul > li > a {
     display: flex;
-    gap: 0 20px;
+    color: var(--color-dark);
+    font-family: Abeezee;
   }
 }
