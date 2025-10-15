@@ -3,6 +3,7 @@
   list-style: none;
 }
 
-.body {
-  background: linear-gradient(120deg, rgb(204 204 204), rgb(255 255 255));
+body {
+  background-image: url('/public/icon/Oval.svg');
+  background-repeat: no-repeat;
 }

@@ -9,5 +9,9 @@
   --color-fotter1: #bebebe;
   --color-lenear1: #5656f2;
   --color-lenear2: #3333dc;
+  --color-footer: rgb(138 138 138);
+  --background-linear1: #2424D0;
+  --background-linear2: #3e3eed;
+  --linear-grad: linear-gradient(120deg,var(--background-linear1),var(--background-linear2));
   --transition: 0.3s;
 }

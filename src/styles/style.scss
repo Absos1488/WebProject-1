@@ -1,3 +1,11 @@
+@mixin button{
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+@mixin section-button{
+  padding: 10px 30px;
+  border-radius: 10px;
+}
 * {
   text-decoration: none;
   list-style: none;
@@ -21,7 +29,7 @@
   justify-content: flex-end;
   margin-left: 25px;
 
-  & > ul {
+  ul{
     display: flex;
     align-items: center;
     margin-left: 0;
@@ -34,7 +42,6 @@
   display: flex;
   position: relative;
   align-items: center;
-  height: 70%;
   transition-duration: var(--transition);
 
   &::after {
@@ -52,11 +59,11 @@
     width: 100%;
   }
 
-  & > a {
+  a {
     color: var(--color-dark) !important;
   }
 
-  & > a:hover {
+  a:hover {
     color: var(--color-hover) !important;
   }
 }
@@ -86,7 +93,7 @@
   text-align: center;
   gap: 4vh;
 
-  & > li > a {
+  a {
     color: var(--color-dark);
   }
 }
@@ -115,40 +122,36 @@
     width: 100%;
   }
 
-  & > a:hover {
+  a:hover {
     color: var(--color-hover);
   }
 }
 
 .nav-button1 {
+  @include button;
   font-weight: 400;
-  padding: 10px 20px;
   background: linear-gradient(
     80deg,
     var(--color-lenear1),
     var(--color-lenear2)
   );
-  border-radius: 10px;
   border: none;
-  transition-duration: var(--transition);
 
   &:hover {
-    transition-duration: var(--transition);
     box-shadow: 0 0 15px 5px var(--color-nav);
+    transition-duration: var(--transition);
   }
 
-  & > a {
+  a {
     font-family: Abeezee, Bold;
-    color: var(--color-white);
+    color: var(--color-white) !important;
   }
 }
 
 .nav-button2 {
+  @include button;
   font-weight: bold;
-  padding: 10px 20px;
   border: none;
-  border-radius: 10px;
-  transition-duration: var(--transition);
   background: linear-gradient(
     100deg,
     rgb(78 78 237 / 12%),
@@ -160,8 +163,8 @@
     transition-duration: var(--transition);
   }
 
-  & > a {
-    color: var(--color-nav-button-text);
+  a {
+    color: var(--color-nav-button-text) !important;
   }
 }
 
@@ -169,10 +172,10 @@
   color: var(--color-nav) !important;
 }
 
-.section {
+.section-info {
   display: flex;
   font-family: Abeezee;
-  height: 910px;
+  height: calc(101vh - 52px);
   align-items: center;
   font-size: 35px;
   justify-content: space-around;
@@ -184,14 +187,13 @@
   height: 40%;
   padding-left: 5%;
 
-  & > h1 {
+  h1 {
     font-weight: 550;
   }
 }
 
 .info__text {
   hyphens: none;
-  align-items: center;
   text-align: start;
 }
 
@@ -211,16 +213,13 @@
 }
 
 .info-button {
+  @include section-button;
   display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 10px 30px;
+  cursor: pointer;
+  text-align: center;
   font-size: 16px;
-  width: 150px;
-  height: 50px;
   border: none;
   margin-top: 30px;
-  border-radius: 10px;
   color: var(--color-white);
   background: linear-gradient(
     90deg,
@@ -239,7 +238,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 55vh;
 }
 
 .footer__div {
@@ -272,7 +271,13 @@
   display: flex;
   font-family: Inter;
   margin-top: 40px;
-  color: rgb(138 138 138);
+  color: var(--color-footer);
+}
+
+.footer-end-text {
+  display: flex;
+  margin-left: 6.4%;
+  padding: 6vh 0vh 6vh 0vh;
 }
 
 .footer__icons {
@@ -288,19 +293,104 @@
   justify-content: flex-end;
   white-space: nowrap;
   gap: 6%;
-  & > div > ul {
+
+  ul {
     font-family: Inter;
-    color: rgb(138 138 138);
+    color: var(--color-footer);
   }
-  & > div > ul > li {
-    padding: 6px;
+
+  li {
+    line-height: 2.1;
   }
-  & > div > ul > li > h3 {
+
+  h3 {
     text-align: left;
   }
-  & > div > ul > li > a {
+
+  a {
     display: flex;
-    color: var(--color-dark);
     font-family: Abeezee;
+    color: var(--color-dark);
   }
+}
+
+.section-programm {
+  background:
+    image-set(
+        url('/public/icon/Mask group.png') type('image/png'),
+        url('/public/icon/Mask group2x.png') 2x type('image/png'),
+        url('/public/icon/Mask group3x.png') 3x type('image/png')
+      ) no-repeat 100% center,
+      var(--linear-grad);
+  background-size: cover;
+  height: 101vh;
+}
+
+.programm__div {
+  padding-top: 13vh;
+  align-items: center;
+  text-align: center;
+
+  & > p {
+    font-family: Abeezee;
+    color: var(--color-white);
+  }
+}
+
+.section-programm-text {
+  margin-top: 2vh;
+  color: var(--color-white);
+  font-family: Abeezee;
+  font-size: 46px;
+}
+
+.programm-p {
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.programm-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.programm-text {
+  line-height: 2;
+  color: var(--color-white);
+  font-family: Abeezee;
+  width: 52%;
+}
+
+.span-text {
+  text-align: center;
+  margin-top: 4vh;
+  width: 58%;
+  color: var(--color-white);
+  font-family: Abeezee;
+}
+.main-article{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 65vh;
+  background: url('/public/icon/Redesigned, how you.png') no-repeat;
+  background-size: 55%;
+  background-position: center;
+}
+.article-text{
+  max-width: 40%;
+  line-height: 2.5;
+  font-family: Abeezee;
+  color: var(--color-article1);
+}
+.article-light{
+  color: var(--color-article2);
+}
+.bottom-text{
+  margin-top: 4vh;
 }
